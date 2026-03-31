@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt & Anfahrt – Briefmarken Basel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/image_1.png" alt="Logo" /></a>
+    <nav class="sitenav"><a href="index.html">Briefmarken Basel</a></nav>
+    <div style="position: relative; margin-left: auto;">
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Briefmarken</a>
+        <a href="gold.html">Gold und Silber</a>
+        <a href="frankatur.html">Frankatur</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="frankatur-hero">
+    <img src="images/image_5.png" alt="Briefmarken Basel Ariel" />
+    <div class="hero-title-block" style="bottom: 160px; flex-direction: column; align-items: flex-start; gap: 8px;">
+      <div class="hero-title-main"><h1>KONTAKT</h1></div>
+      <div class="hero-title-sub" style="margin-left: 0; align-self: flex-start;"><span>ANFAHRT</span></div>
+    </div>
+  </div>
+  <div class="kontakt-content">
+    <div class="kontakt-left">
+      <h2>So finden Sie uns</h2>
+      <div class="kontakt-info-block">
+        <h3>ADRESSE</h3>
+        <p>Briefmarken Ariel</p>
+        <p>Reinacherstrasse 263</p>
+        <p>4053 Basel</p>
+      </div>
+      <div class="kontakt-info-block">
+        <h3>ÖFFNUNGSZEITEN</h3>
+        <p>Montag: 10–12h und 14–16h</p>
+        <p>Dienstag: 9–12h</p>
+        <p>Freitag: 10–12h und 14–16h</p>
+      </div>
+      <div class="kontakt-info-block">
+        <h3>KONTAKT</h3>
+        <a href="tel:+41782472407">+41 78 247 24 07</a>
+        <a href="mailto:briefmarkenariel@gmail.com">briefmarkenariel@gmail.com</a>
+      </div>
+    </div>
+    <div class="kontakt-right">
+      <img class="kontakt-entrance-img" src="images/image_6.jpg" alt="Eingang Reinacherstrasse 263" />
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.hamburger') && !e.target.closest('.dropdown-menu')) {
+        document.getElementById('dropdownMenu').classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
