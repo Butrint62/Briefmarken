@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briefmarken Basel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/image_1.png" alt="Logo" /></a>
+    <nav class="sitenav"><a href="index.html">Briefmarken Basel</a></nav>
+    <div style="position: relative; margin-left: auto;">
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Briefmarken</a>
+        <a href="gold.html">Gold und Silber</a>
+        <a href="frankatur.html">Frankatur</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img class="hero-bg" src="images/image_2.jpg" alt="Briefmarken Sammlung" />
+    <div class="hero-title-block">
+      <div class="hero-title-main"><h1>BRIEFMARKEN BASEL</h1></div>
+      <div class="hero-title-sub"><span>AN- UND VERKAUF</span></div>
+    </div>
+  </section>
+
+  <section class="main-section">
+    <div class="main-left">
+      <h2>ANKAUF- UND VERKAUF VON BRIEFMARKEN,<br>KAFFEERAHMDECKEL, MÜNZEN UND MEHR</h2>
+      <div class="text-cols">
+        <p>Wir kaufen Briefmarken-, Kaffeerahmdeckel und Münzsammlungen sowie hochwertige Einzelstücke&nbsp;– in jeder Grössenordnung. Auch ganze Nachlässe übernehmen wir gerne.</p>
+        <p>Wir bieten ihnen kostenlose Offerten und unverbindliche Schätzungen. Der Ankauf erfolgt gegen sofortige Barzahlung. Wahlweise nach Terminvereinbarung im Geschäft oder bequem bei Ihnen zu Hause.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHWEIZER BRIEFMARKEN -->
+  <section class="rarities-section">
+    <div class="rarities-card">
+      <div class="rarities-card-header">
+        <div>
+          <div class="rarities-card-title">Schweizer Briefmarken</div>
+          <div class="rarities-card-subtitle">Ausgewählte Schweizer Briefmarken aus unserer Sammlung</div>
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn" id="prev-sw" onclick="moveCarousel(-1,'sw')">&#8592;</button>
+          <button class="carousel-btn" id="next-sw" onclick="moveCarousel(1,'sw')">&#8594;</button>
+          <button class="carousel-btn" id="expand-sw" onclick="toggleExpand('sw')" title="Alle anzeigen">
+            <svg id="icon-sw" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper" id="wrapper-sw">
+        <div class="carousel-track" id="track-sw"></div>
+      </div>
+      <div class="carousel-peek-row">
+        <div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHINESISCHE BRIEFMARKEN -->
+  <section class="rarities-section">
+    <div class="rarities-card">
+      <div class="rarities-card-header">
+        <div>
+          <div class="rarities-card-title">Chinesische Briefmarken</div>
+          <div class="rarities-card-subtitle">Ausgewählte chinesische Briefmarken aus unserer Sammlung</div>
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn" id="prev-ch" onclick="moveCarousel(-1,'ch')">&#8592;</button>
+          <button class="carousel-btn" id="next-ch" onclick="moveCarousel(1,'ch')">&#8594;</button>
+          <button class="carousel-btn" id="expand-ch" onclick="toggleExpand('ch')" title="Alle anzeigen">
+            <svg id="icon-ch" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper" id="wrapper-ch">
+        <div class="carousel-track" id="track-ch"></div>
+      </div>
+      <div class="carousel-peek-row">
+        <div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEUTSCHE BRIEFMARKEN -->
+  <section class="rarities-section">
+    <div class="rarities-card">
+      <div class="rarities-card-header">
+        <div>
+          <div class="rarities-card-title">Deutsche Briefmarken</div>
+          <div class="rarities-card-subtitle">Ausgewählte deutsche Briefmarken aus unserer Sammlung</div>
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn" id="prev-de" onclick="moveCarousel(-1,'de')">&#8592;</button>
+          <button class="carousel-btn" id="next-de" onclick="moveCarousel(1,'de')">&#8594;</button>
+          <button class="carousel-btn" id="expand-de" onclick="toggleExpand('de')" title="Alle anzeigen">
+            <svg id="icon-de" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper" id="wrapper-de">
+        <div class="carousel-track" id="track-de"></div>
+      </div>
+      <div class="carousel-peek-row">
+        <div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out;">
+    <img id="lightbox-img" src="" alt="" style="max-width:88vw; max-height:82vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.7); object-fit:contain; cursor:default;" onclick="event.stopPropagation()" />
+    <!-- Close -->
+    <button onclick="closeLightbox()" style="position:fixed; top:18px; right:22px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; width:44px; height:44px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:1001;">&times;</button>
+    <!-- Prev -->
+    <button id="lb-prev" onclick="event.stopPropagation(); lightboxNav(-1)" style="position:fixed; left:16px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:22px; width:48px; height:48px; border-radius:50%; cursor:pointer; display:none; align-items:center; justify-content:center; z-index:1001;">&#8592;</button>
+    <!-- Next -->
+    <button id="lb-next" onclick="event.stopPropagation(); lightboxNav(1)" style="position:fixed; right:16px; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:22px; width:48px; height:48px; border-radius:50%; cursor:pointer; display:none; align-items:center; justify-content:center; z-index:1001;">&#8594;</button>
+    <!-- Counter -->
+    <div id="lb-counter" style="position:fixed; bottom:22px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.5); color:#fff; font-family:'Raleway',sans-serif; font-size:14px; padding:5px 14px; border-radius:20px; display:none; z-index:1001;"></div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('dropdownMenu');
+      if (menu.classList.contains('open')) {
+        closeDropdown(menu);
+      } else {
+        menu.classList.remove('closing');
+        menu.classList.add('open');
+      }
+    }
+    function closeDropdown(menu) {
+      menu = menu || document.getElementById('dropdownMenu');
+      if (!menu.classList.contains('open')) return;
+      menu.classList.remove('open');
+      menu.classList.add('closing');
+      setTimeout(function() { menu.classList.remove('closing'); }, 150);
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.hamburger') && !e.target.closest('.dropdown-menu')) {
+        closeDropdown(document.getElementById('dropdownMenu'));
+      }
+    });
+  </script>
+
+  <script>
+    var carouselIndexes = { sw: 0, ch: 0, de: 0 };
+    var expandedState   = { sw: false, ch: false, de: false };
+
+    function buildCard(card) {
+      var price = card.price ? 'CHF ' + card.price : 'CHF &mdash;';
+      var name  = card.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      var enc   = encodeURIComponent(card.name);
+      var imgs  = card.images || (card.image ? [card.image] : []);
+      var show  = Math.min(imgs.length, 4);
+      var colClass = 'collage-' + (show || 1);
+      var cells = '';
+      for (var i = 0; i < show; i++) {
+        var isLast = (i === 3 && imgs.length > 4);
+        cells += '<div class="collage-cell" data-idx="' + i + '" style="background-image:url(\'' + imgs[i] + '\')">';
+        if (isLast) cells += '<div class="collage-more">+' + (imgs.length - 3) + '</div>';
+        cells += '</div>';
+      }
+      return '<div class="product-card">' +
+        '<div class="product-thumb-wrap"><div class="collage ' + colClass + '">' + cells + '</div></div>' +
+        '<div class="product-info">' +
+          '<div class="product-name">' + name + '</div>' +
+          '<div class="product-desc">' + card.desc.replace(/&/g,'&amp;') + '</div>' +
+          '<div class="product-price">' + price + '</div>' +
+          '<div class="product-btns">' +
+            '<a class="product-btn product-btn-wa" href="https://wa.me/41782472407?text=Ich%20interessiere%20mich%20f%C3%BCr%3A%20' + enc + '" target="_blank">WhatsApp</a>' +
+            '<a class="product-btn product-btn-email" href="mailto:briefmarkenariel@gmail.com?subject=Anfrage%3A%20' + enc + '">E-Mail</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }
+
+    function renderTrack(trackId, cards) {
+      var track = document.getElementById(trackId);
+      track.innerHTML = cards.map(buildCard).join('');
+      track.querySelectorAll('.product-card').forEach(function(cardEl, i) {
+        var imgs = cards[i].images || (cards[i].image ? [cards[i].image] : []);
+        cardEl.querySelectorAll('.collage-cell').forEach(function(cell) {
+          cell.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openLightbox(imgs, parseInt(this.getAttribute('data-idx')));
+          });
+        });
+      });
+    }
+
+    function moveCarousel(dir, id) {
+      var track = document.getElementById('track-' + id);
+      var cards = track.querySelectorAll('.product-card');
+      if (!cards.length) return;
+      var visibleCount = expandedState[id] ? 6 : (window.innerWidth <= 640 ? 1 : (window.innerWidth <= 900 ? 2 : 3));
+      var maxIndex = Math.max(0, cards.length - visibleCount);
+      carouselIndexes[id] = Math.max(0, Math.min(carouselIndexes[id] + dir, maxIndex));
+      var cardWidth = cards[0].offsetWidth + 16;
+      track.style.transform = 'translateX(-' + (carouselIndexes[id] * cardWidth) + 'px)';
+      document.getElementById('prev-' + id).disabled = carouselIndexes[id] === 0;
+      document.getElementById('next-' + id).disabled = carouselIndexes[id] >= maxIndex;
+    }
+
+    function toggleExpand(id) {
+      expandedState[id] = !expandedState[id];
+      var track   = document.getElementById('track-' + id);
+      var wrapper = document.getElementById('wrapper-' + id);
+      var prev    = document.getElementById('prev-' + id);
+      var next    = document.getElementById('next-' + id);
+      var icon    = document.getElementById('icon-' + id);
+      var card    = wrapper.closest('.rarities-card');
+      if (expandedState[id]) {
+        track.classList.add('track-expanded');
+        track.style.transform   = 'none';
+        track.style.flexWrap    = 'wrap';
+        wrapper.style.overflowX = 'hidden';
+        wrapper.style.overflowY = 'auto';
+        wrapper.style.maxHeight = '620px';
+        prev.style.display = 'none';
+        next.style.display = 'none';
+        card.classList.add('expanded');
+        icon.innerHTML = '<line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/>';
+      } else {
+        track.classList.remove('track-expanded');
+        track.style.flexWrap    = '';
+        wrapper.style.overflowX = '';
+        wrapper.style.overflowY = '';
+        wrapper.style.maxHeight = '';
+        prev.style.display = '';
+        next.style.display = '';
+        card.classList.remove('expanded');
+        icon.innerHTML = '<rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/>';
+        carouselIndexes[id] = 0;
+        setTimeout(function() { moveCarousel(0, id); }, 10);
+      }
+    }
+
+    var lbImgs = [], lbIdx = 0;
+    function openLightbox(imgs, idx) {
+      lbImgs = typeof imgs === 'string' ? [imgs] : imgs;
+      lbIdx  = idx || 0;
+      updateLightbox();
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function updateLightbox() {
+      document.getElementById('lightbox-img').src = lbImgs[lbIdx];
+      var multi = lbImgs.length > 1;
+      var counter = document.getElementById('lb-counter');
+      var prev = document.getElementById('lb-prev');
+      var next = document.getElementById('lb-next');
+      counter.style.display = multi ? 'block' : 'none';
+      if (multi) counter.textContent = (lbIdx + 1) + ' / ' + lbImgs.length;
+      prev.style.display = (multi && lbIdx > 0) ? 'flex' : 'none';
+      next.style.display = (multi && lbIdx < lbImgs.length - 1) ? 'flex' : 'none';
+    }
+    function lightboxNav(dir) {
+      lbIdx = Math.max(0, Math.min(lbIdx + dir, lbImgs.length - 1));
+      updateLightbox();
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft')  lightboxNav(-1);
+      if (e.key === 'ArrowRight') lightboxNav(1);
+    });
+
+    // Load cards from JSON
+    fetch('cards.json?v=' + Date.now())
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        renderTrack('track-sw', data.schweiz    || []);
+        renderTrack('track-ch', data.china      || []);
+        renderTrack('track-de', data.deutschland|| []);
+        moveCarousel(0, 'sw');
+        moveCarousel(0, 'ch');
+        moveCarousel(0, 'de');
+      })
+      .catch(function() {
+        ['track-sw','track-ch','track-de'].forEach(function(id) {
+          document.getElementById(id).innerHTML =
+            '<div style="padding:24px;color:rgba(255,255,255,0.5);font-family:Raleway,sans-serif;font-size:14px;">Karten konnten nicht geladen werden. Bitte Seite über den Server öffnen.</div>';
+        });
+      });
+  </script>
+</body>
+</html>

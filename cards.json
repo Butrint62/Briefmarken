@@ -1,0 +1,162 @@
+{
+  "schweiz": [
+    {
+      "id": "flugpostmarken_1",
+      "name": "Flugpostmarken",
+      "desc": "Jahrgang 1919-1947",
+      "price": "150",
+      "images": [
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%281%29.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%282%29.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%283%29.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%284%29.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%285%29.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/Flugpostmarken%20%286%29.jpeg"
+      ]
+    },
+    {
+      "id": "projuventuteblock_2",
+      "name": "Pro Juventute Block",
+      "desc": "Jahrgang 1912",
+      "price": "30",
+      "images": [
+        "images/schweiz/pro-juventute-block_1912_30/pro%20juventute%20block%20%281%29.jpeg",
+        "images/schweiz/pro-juventute-block_1912_30/pro%20juventute%20block%20%282%29.jpeg"
+      ]
+    },
+    {
+      "id": "schweizverschidenealtebriefe_3",
+      "name": "Schweiz Verschidene Alte Briefe",
+      "desc": "",
+      "price": "230",
+      "images": [
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%281%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%282%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%283%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%284%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%285%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%286%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%287%29.jpeg",
+        "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe%20%288%29.jpeg"
+      ]
+    },
+    {
+      "id": "verschiedenepostfrischundentwerteteblockmarken_4",
+      "name": "Verschiedene Postfrisch Und Entwertete Blockmarken",
+      "desc": "",
+      "price": "120",
+      "images": [
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%281%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%2810%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%282%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%283%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%284%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%285%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%286%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%287%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%288%29.jpeg",
+        "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120%20%289%29.jpeg"
+      ]
+    }
+  ],
+  "china": [
+    {
+      "id": "chinavolksrepublikpostfrisch_1",
+      "name": "China Volksrepublik Postfrisch",
+      "desc": "Jahrgang 1962",
+      "price": "500",
+      "image": "images/china/china-volksrepublik-postfrisch_1962_500.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_2",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1964",
+      "price": "20",
+      "image": "images/china/china-volksrepublik_1964_20.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_3",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1967",
+      "price": "100",
+      "image": "images/china/china-volksrepublik_1967%20_100.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_4",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1967",
+      "price": "300",
+      "image": "images/china/china-volksrepublik_1967_300.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_5",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1961",
+      "price": "20",
+      "image": "images/china/china_volksrepublik_1961_20.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_6",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1961",
+      "price": "25",
+      "image": "images/china/china_volksrepublik_1961_25.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_7",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1963",
+      "price": "220",
+      "image": "images/china/china_volksrepublik_1963_220.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_8",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1967",
+      "price": "80",
+      "image": "images/china/china_volksrepublik_1967_80.jpeg"
+    }
+  ],
+  "deutschland": [
+    {
+      "id": "ddr_1",
+      "name": "Ddr",
+      "desc": "",
+      "price": "50",
+      "images": [
+        "images/deutschland/ddr_50/ddr%20%281%29.jpeg",
+        "images/deutschland/ddr_50/ddr%20%282%29.jpeg",
+        "images/deutschland/ddr_50/ddr%20%283%29.jpeg",
+        "images/deutschland/ddr_50/ddr%20%284%29.jpeg"
+      ]
+    },
+    {
+      "id": "deutschesreich_2",
+      "name": "Deutsches Reich",
+      "desc": "Jahrgang 1928-und-1939",
+      "price": "40",
+      "image": "images/deutschland/deutsches-reich_1928-und-1939_40.jpeg"
+    },
+    {
+      "id": "deutschesreich_3",
+      "name": "Deutsches Reich",
+      "desc": "",
+      "price": "30",
+      "images": [
+        "images/deutschland/deutsches-reich_30/deutsches-reich%20%281%29.jpeg",
+        "images/deutschland/deutsches-reich_30/deutsches-reich%20%282%29.jpeg",
+        "images/deutschland/deutsches-reich_30/deutsches-reich%20%283%29.jpeg"
+      ]
+    },
+    {
+      "id": "deutschlandbundespost_4",
+      "name": "Deutschland Bundespost",
+      "desc": "",
+      "price": "50",
+      "images": [
+        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost%20%281%29.jpeg",
+        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost%20%282%29.jpeg"
+      ]
+    }
+  ]
+}

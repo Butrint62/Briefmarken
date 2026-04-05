@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frankatur – Briefmarken Basel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/image_1.png" alt="Logo" /></a>
+    <nav class="sitenav"><a href="index.html">Briefmarken Basel</a></nav>
+    <div style="position: relative; margin-left: auto;">
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Briefmarken</a>
+        <a href="gold.html">Gold und Silber</a>
+        <a href="frankatur.html">Frankatur</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="frankatur-hero">
+    <img src="images/image_4.jpg" alt="Briefmarken Sammlung" />
+  </div>
+  <div class="frankatur-content">
+    <div class="frankatur-text">
+      <h2>An- und Verkauf Frankatur</h2>
+      <div class="frankatur-info-block">
+        <p>Wir kaufen Frankaturware Schweiz, sortiert nach Wertstufen oder in Bogen in jeder Grössenordnung.</p>
+      </div>
+      <div class="frankatur-info-block">
+        <span class="highlight">30% des Nominalwertes</span>
+        <p>Momentan vergüten wir 30% des Nominalwertes (exklusive Zuschläge).</p>
+      </div>
+      <div class="frankatur-info-block">
+        <p>Die Vergütung erfolgt nach Sichtung und Bearbeitung des Postens innert Wochenfrist.</p>
+      </div>
+    </div>
+    <div class="frankatur-images">
+      <img src="images/Frankatur%20seite%20Bilder%20(1).jpeg" alt="Frankatur Briefmarken" />
+      <img src="images/Frankatur%20seite%20Bilder%20(2).jpeg" alt="Frankatur Briefmarken" />
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('dropdownMenu');
+      if (menu.classList.contains('open')) {
+        closeDropdown(menu);
+      } else {
+        menu.classList.remove('closing');
+        menu.classList.add('open');
+      }
+    }
+    function closeDropdown(menu) {
+      menu = menu || document.getElementById('dropdownMenu');
+      if (!menu.classList.contains('open')) return;
+      menu.classList.remove('open');
+      menu.classList.add('closing');
+      setTimeout(function() { menu.classList.remove('closing'); }, 150);
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.hamburger') && !e.target.closest('.dropdown-menu')) {
+        closeDropdown(document.getElementById('dropdownMenu'));
+      }
+    });
+  </script>
+</body>
+</html>

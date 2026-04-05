@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold und Silber – Briefmarken Basel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="images/image_1.png" alt="Logo" /></a>
+    <nav class="sitenav"><a href="index.html">Briefmarken Basel</a></nav>
+    <div style="position: relative; margin-left: auto;">
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Briefmarken</a>
+        <a href="gold.html">Gold und Silber</a>
+        <a href="frankatur.html">Frankatur</a>
+        <a href="kontakt.html">Kontakt &amp; Anfahrt</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="frankatur-hero">
+    <img src="images/image_3.jpg" alt="Gold und Silber" />
+  </div>
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('gold', this)">GOLD</button>
+    <button class="tab-btn" onclick="switchTab('silber', this)">SILBER</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-gold">
+    <div class="metal-content">
+      <h2>Wir suchen und kaufen Gold und Silber</h2>
+      <div class="metal-categories">
+        <span class="metal-tag">Goldvreneli</span>
+        <span class="metal-tag">Altgold</span>
+        <span class="metal-tag">Silber</span>
+        <span class="metal-tag">Münzen</span>
+        <span class="metal-tag">Barren</span>
+        <span class="metal-tag">Medaillen</span>
+        <span class="metal-tag">Uhren</span>
+        <span class="metal-tag">Ringe</span>
+        <span class="metal-tag">Ketten</span>
+      </div>
+      <div class="gold-contact-box">
+        <div class="gold-contact-text">Für aktuelle Ankaufspreise pro Gramm kontaktieren Sie uns unverbindlich per Telefon oder E-Mail.</div>
+        <div class="gold-contact-links">
+          <a href="tel:+41782472407">+41 78 247 24 07</a>
+          <a href="mailto:briefmarkenariel@gmail.com">briefmarkenariel@gmail.com</a>
+        </div>
+        <div class="product-btns" style="margin-top: 16px; max-width: 320px;">
+          <a class="product-btn product-btn-wa" href="https://wa.me/41782472407?text=Ich%20m%C3%B6chte%20eine%20Offerte%20f%C3%BCr%20Gold%20%2F%20Silber" target="_blank">WhatsApp</a>
+          <a class="product-btn product-btn-email" href="mailto:briefmarkenariel@gmail.com?subject=Offerte%20Gold%20%2F%20Silber">E-Mail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-silber">
+    <div class="metal-content">
+      <h2>Wir bezahlen pro Stück</h2>
+      <div class="price-cards" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="price-card">
+          <div class="price-label">Silber Fünfliber</div>
+          <div class="price-value">6.00</div>
+          <div class="price-unit">CHF / Stück</div>
+          <img src="images/coin_5franken.png" alt="Silber 5 Franken" class="coin-img" />
+        </div>
+        <div class="price-card">
+          <div class="price-label">Silber 2-Fränkler</div>
+          <div class="price-value">2.40</div>
+          <div class="price-unit">CHF / Stück</div>
+          <img src="images/coin_2franken.png" alt="Silber 2 Franken" class="coin-img" />
+        </div>
+        <div class="price-card">
+          <div class="price-label">Silber 1-Fränkler</div>
+          <div class="price-value">1.20</div>
+          <div class="price-unit">CHF / Stück</div>
+          <img src="images/coin_1franken.png" alt="Silber 1 Franken" class="coin-img" />
+        </div>
+        <div class="price-card">
+          <div class="price-label">Silber 50-Räppler</div>
+          <div class="price-value">0.60</div>
+          <div class="price-unit">CHF / Stück</div>
+          <img src="images/coin_50rappen.png" alt="Silber 50 Rappen" class="coin-img" />
+        </div>
+      </div>
+      <p class="price-note">Die aufgeführten Preise sind unverbindliche Richtpreise. Gerne erstellen wir für Sie eine verbindliche Offerte. Melden Sie sich per Telefon oder E-Mail.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('dropdownMenu');
+      if (menu.classList.contains('open')) {
+        closeDropdown(menu);
+      } else {
+        menu.classList.remove('closing');
+        menu.classList.add('open');
+      }
+    }
+    function closeDropdown(menu) {
+      menu = menu || document.getElementById('dropdownMenu');
+      if (!menu.classList.contains('open')) return;
+      menu.classList.remove('open');
+      menu.classList.add('closing');
+      setTimeout(function() { menu.classList.remove('closing'); }, 150);
+    }
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.hamburger') && !e.target.closest('.dropdown-menu')) {
+        closeDropdown(document.getElementById('dropdownMenu'));
+      }
+    });
+  </script>
+  <script>
+    function switchTab(name, btn) {
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.getElementById('tab-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
