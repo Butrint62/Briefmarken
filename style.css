@@ -539,7 +539,20 @@ header nav.sitenav a {
 @media (max-width: 640px) {
   .rarities-section { padding: 20px 16px 28px 16px; }
   .rarities-card-title { font-size: 16px; }
-  .product-card { flex: 0 0 calc(80vw - 32px); }
+  .product-card { flex: 0 0 calc(80vw - 32px); scroll-snap-align: start; }
+  .carousel-track.track-expanded .product-card { flex: 0 0 calc(50% - 8px) !important; scroll-snap-align: unset; }
+  /* Native touch scroll on mobile */
+  .carousel-track-wrapper {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .carousel-track-wrapper::-webkit-scrollbar { display: none; }
+  /* Hide arrow buttons — swipe instead */
+  .carousel-btn:not(#expand-sw):not(#expand-ch):not(#expand-de) { display: none !important; }
 }
 @media (min-width: 641px) and (max-width: 900px) {
   .rarities-section { padding: 32px 36px 40px 36px; }

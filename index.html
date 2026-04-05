@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Briefmarken Basel</title>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <header>
@@ -207,10 +207,11 @@
     }
 
     function moveCarousel(dir, id) {
+      if (window.innerWidth <= 640) return; // mobile uses native touch scroll
       var track = document.getElementById('track-' + id);
       var cards = track.querySelectorAll('.product-card');
       if (!cards.length) return;
-      var visibleCount = expandedState[id] ? 6 : (window.innerWidth <= 640 ? 1 : (window.innerWidth <= 900 ? 2 : 3));
+      var visibleCount = expandedState[id] ? 6 : (window.innerWidth <= 900 ? 2 : 3);
       var maxIndex = Math.max(0, cards.length - visibleCount);
       carouselIndexes[id] = Math.max(0, Math.min(carouselIndexes[id] + dir, maxIndex));
       var cardWidth = cards[0].offsetWidth + 16;
