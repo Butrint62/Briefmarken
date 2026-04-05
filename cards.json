@@ -1,32 +1,8 @@
 {
   "schweiz": [
     {
-      "id": "flugpostmarken_1",
-      "name": "Flugpostmarken",
-      "desc": "Jahrgang 1919-1947",
-      "price": "150",
-      "images": [
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-1.jpeg",
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-2.jpeg",
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-3.jpeg",
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-4.jpeg",
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-5.jpeg",
-        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-6.jpeg"
-      ]
-    },
-    {
-      "id": "projuventuteblock_2",
-      "name": "Pro Juventute Block",
-      "desc": "Jahrgang 1912",
-      "price": "30",
-      "images": [
-        "images/schweiz/pro-juventute-block_1912_30/pro-juventute-block-1.jpeg",
-        "images/schweiz/pro-juventute-block_1912_30/pro-juventute-block-2.jpeg"
-      ]
-    },
-    {
       "id": "schweizverschidenealtebriefe_3",
-      "name": "Schweiz Verschidene Alte Briefe",
+      "name": "Schweiz Verschiedene Alte Briefe",
       "desc": "",
       "price": "230",
       "images": [
@@ -38,6 +14,20 @@
         "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe-6.jpeg",
         "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe-7.jpeg",
         "images/schweiz/schweiz-verschidene-alte-briefe_230/schweiz-verschidene-alte-briefe-8.jpeg"
+      ]
+    },
+    {
+      "id": "flugpostmarken_1",
+      "name": "Flugpostmarken",
+      "desc": "Jahrgang 1919-1947",
+      "price": "150",
+      "images": [
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-1.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-2.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-3.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-4.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-5.jpeg",
+        "images/schweiz/Flugpostmarken_1919-1947_150/flugpostmarken-6.jpeg"
       ]
     },
     {
@@ -57,6 +47,16 @@
         "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120-8.jpeg",
         "images/schweiz/verschiedene-postfrisch-und-entwertete-blockmarken_120/verschiedene-postfrisch-und-entwertete-blockmarken_120-9.jpeg"
       ]
+    },
+    {
+      "id": "projuventuteblock_2",
+      "name": "Pro Juventute Block",
+      "desc": "Jahrgang 1912",
+      "price": "30",
+      "images": [
+        "images/schweiz/pro-juventute-block_1912_30/pro-juventute-block-1.jpeg",
+        "images/schweiz/pro-juventute-block_1912_30/pro-juventute-block-2.jpeg"
+      ]
     }
   ],
   "china": [
@@ -68,39 +68,11 @@
       "image": "images/china/china-volksrepublik-postfrisch_1962_500.jpeg"
     },
     {
-      "id": "chinavolksrepublik_2",
-      "name": "China Volksrepublik",
-      "desc": "Jahrgang 1964",
-      "price": "20",
-      "image": "images/china/china-volksrepublik_1964_20.jpeg"
-    },
-    {
-      "id": "chinavolksrepublik_3",
-      "name": "China Volksrepublik",
-      "desc": "Jahrgang 1967-",
-      "price": "100",
-      "image": "images/china/china-volksrepublik_1967-_100.jpeg"
-    },
-    {
       "id": "chinavolksrepublik_4",
       "name": "China Volksrepublik",
       "desc": "Jahrgang 1967",
       "price": "300",
       "image": "images/china/china-volksrepublik_1967_300.jpeg"
-    },
-    {
-      "id": "chinavolksrepublik_5",
-      "name": "China Volksrepublik",
-      "desc": "Jahrgang 1961",
-      "price": "20",
-      "image": "images/china/china_volksrepublik_1961_20.jpeg"
-    },
-    {
-      "id": "chinavolksrepublik_6",
-      "name": "China Volksrepublik",
-      "desc": "Jahrgang 1961",
-      "price": "25",
-      "image": "images/china/china_volksrepublik_1961_25.jpeg"
     },
     {
       "id": "chinavolksrepublik_7",
@@ -110,17 +82,45 @@
       "image": "images/china/china_volksrepublik_1963_220.jpeg"
     },
     {
+      "id": "chinavolksrepublik_3",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1967",
+      "price": "100",
+      "image": "images/china/china-volksrepublik_1967-_100.jpeg"
+    },
+    {
       "id": "chinavolksrepublik_8",
       "name": "China Volksrepublik",
       "desc": "Jahrgang 1967",
       "price": "80",
       "image": "images/china/china_volksrepublik_1967_80.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_6",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1961",
+      "price": "25",
+      "image": "images/china/china_volksrepublik_1961_25.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_2",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1964",
+      "price": "20",
+      "image": "images/china/china-volksrepublik_1964_20.jpeg"
+    },
+    {
+      "id": "chinavolksrepublik_5",
+      "name": "China Volksrepublik",
+      "desc": "Jahrgang 1961",
+      "price": "20",
+      "image": "images/china/china_volksrepublik_1961_20.jpeg"
     }
   ],
   "deutschland": [
     {
       "id": "ddr_1",
-      "name": "Ddr",
+      "name": "DDR",
       "desc": "",
       "price": "50",
       "images": [
@@ -128,6 +128,16 @@
         "images/deutschland/ddr_50/ddr-2.jpeg",
         "images/deutschland/ddr_50/ddr-3.jpeg",
         "images/deutschland/ddr_50/ddr-4.jpeg"
+      ]
+    },
+    {
+      "id": "deutschlandbundespost_4",
+      "name": "Deutschland Bundespost",
+      "desc": "",
+      "price": "50",
+      "images": [
+        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost-1.jpeg",
+        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost-2.jpeg"
       ]
     },
     {
@@ -146,16 +156,6 @@
         "images/deutschland/deutsches-reich_30/deutsches-reich-1.jpeg",
         "images/deutschland/deutsches-reich_30/deutsches-reich-2.jpeg",
         "images/deutschland/deutsches-reich_30/deutsches-reich-3.jpeg"
-      ]
-    },
-    {
-      "id": "deutschlandbundespost_4",
-      "name": "Deutschland Bundespost",
-      "desc": "",
-      "price": "50",
-      "images": [
-        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost-1.jpeg",
-        "images/deutschland/deutschland-bundespost_50/deutschland-bundespost-2.jpeg"
       ]
     }
   ]

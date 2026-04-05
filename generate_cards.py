@@ -109,6 +109,7 @@ def scan_category(folder_path, url_prefix):
             }
             cards.append(card)
 
+    cards.sort(key=lambda c: float(c['price']) if c['price'] else 0, reverse=True)
     return cards
 
 def main():
