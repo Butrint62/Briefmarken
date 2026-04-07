@@ -418,6 +418,7 @@ header nav.sitenav a {
   border-radius: 8px;
   pointer-events: none;
 }
+.track-expanded .product-card-placeholder { display: none; }
 .carousel-track {
   display: flex;
   gap: 16px;
