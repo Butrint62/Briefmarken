@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Briefmarken Basel</title>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
   <header>
@@ -39,6 +39,17 @@
         <p>Wir kaufen Briefmarken-, Kaffeerahmdeckel und Münzsammlungen sowie hochwertige Einzelstücke&nbsp;– in jeder Grössenordnung. Auch ganze Nachlässe übernehmen wir gerne.</p>
         <p>Wir bieten ihnen kostenlose Offerten und unverbindliche Schätzungen. Der Ankauf erfolgt gegen sofortige Barzahlung. Wahlweise nach Terminvereinbarung im Geschäft oder bequem bei Ihnen zu Hause.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- RARITÄTEN SPOTLIGHT -->
+  <section class="spotlight-section">
+    <div class="spotlight-header">
+      <div class="spotlight-title">Besondere Raritäten</div>
+      <div class="spotlight-subtitle">Ausgesuchte Einzelstücke aus unserer Sammlung</div>
+    </div>
+    <div class="spotlight-scroller">
+      <div class="spotlight-track" id="spotlight-track"></div>
     </div>
   </section>
 
@@ -123,6 +134,33 @@
     </div>
   </section>
 
+  <!-- ITALIENISCHE BRIEFMARKEN -->
+  <section class="rarities-section">
+    <div class="rarities-card">
+      <div class="rarities-card-header">
+        <div>
+          <div class="rarities-card-title">Italienische Briefmarken</div>
+          <div class="rarities-card-subtitle">Ausgewählte italienische Briefmarken aus unserer Sammlung</div>
+        </div>
+        <div class="carousel-btns">
+          <button class="carousel-btn" id="prev-it" onclick="moveCarousel(-1,'it')">&#8592;</button>
+          <button class="carousel-btn" id="next-it" onclick="moveCarousel(1,'it')">&#8594;</button>
+          <button class="carousel-btn" id="expand-it" onclick="toggleExpand('it')" title="Alle anzeigen">
+            <svg id="icon-it" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper" id="wrapper-it">
+        <div class="carousel-track" id="track-it"></div>
+      </div>
+      <div class="carousel-peek-row">
+        <div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div><div class="peek-card"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- LIGHTBOX -->
   <div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out;">
     <img id="lightbox-img" src="" alt="" style="max-width:88vw; max-height:82vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.7); object-fit:contain; cursor:default;" onclick="event.stopPropagation()" />
@@ -161,8 +199,8 @@
   </script>
 
   <script>
-    var carouselIndexes = { sw: 0, ch: 0, de: 0 };
-    var expandedState   = { sw: false, ch: false, de: false };
+    var carouselIndexes = { sw: 0, ch: 0, de: 0, it: 0 };
+    var expandedState   = { sw: false, ch: false, de: false, it: false };
 
     function buildCard(card) {
       var price = card.price ? 'CHF ' + card.price : 'CHF &mdash;';
@@ -204,6 +242,13 @@
           });
         });
       });
+      // Pad with empty placeholder cards if fewer than 3
+      var needed = 3 - cards.length;
+      for (var p = 0; p < needed; p++) {
+        var ph = document.createElement('div');
+        ph.className = 'product-card product-card-placeholder';
+        track.appendChild(ph);
+      }
     }
 
     function moveCarousel(dir, id) {
@@ -287,16 +332,79 @@
       if (e.key === 'ArrowRight') lightboxNav(1);
     });
 
+    // Spotlight infinite scroller
+    var spotlightImages = [
+      { src: 'images/selten/selten-briefmarken.jpeg',           name: 'Seltene Briefmarken' },
+      { src: 'images/selten/selten-briefmarkenn.jpeg',          name: 'Seltene Briefmarken' },
+      { src: 'images/selten/seltene-briefmarken.jpeg',          name: 'Seltene Briefmarken' },
+      { src: 'images/selten/selten-kaffeerahmdeckel-blick.jpeg', name: 'Kaffeerahmdeckel' },
+      { src: 'images/selten/vorlaufer-briefmarken-selten.jpeg', name: 'Vorläufer Briefmarken' }
+    ];
+    (function() {
+      var track = document.getElementById('spotlight-track');
+      var CARD_W = 300, GAP = 24, SPEED = 0.6;
+      var scrollPos = 0, paused = false;
+
+      // Triple items for seamless loop
+      var allItems = spotlightImages.concat(spotlightImages).concat(spotlightImages);
+      allItems.forEach(function(item) {
+        var enc = encodeURIComponent(item.name);
+        var div = document.createElement('div');
+        div.className = 'spotlight-card';
+        div.innerHTML =
+          '<div class="spotlight-img-wrap"><img src="' + item.src + '" alt="' + item.name + '" /></div>' +
+          '<div class="spotlight-info"><div class="spotlight-name">' + item.name + '</div></div>';
+        div.querySelector('img').addEventListener('click', function() {
+          openLightbox([item.src], 0);
+        });
+        track.appendChild(div);
+      });
+
+      var loopWidth = spotlightImages.length * (CARD_W + GAP);
+      scrollPos = loopWidth; // start at middle copy
+
+      function animate() {
+        if (!paused) {
+          scrollPos += SPEED;
+          if (scrollPos >= loopWidth * 2) scrollPos -= loopWidth;
+        }
+        track.style.transform = 'translateX(-' + scrollPos + 'px)';
+
+        // Center effect
+        var scroller = track.parentElement;
+        var centerX = scroller.getBoundingClientRect().left + scroller.offsetWidth / 2;
+        var cards = track.querySelectorAll('.spotlight-card');
+        cards.forEach(function(card) {
+          var r = card.getBoundingClientRect();
+          var cardCenter = r.left + r.width / 2;
+          var dist = Math.abs(cardCenter - centerX);
+          var maxD = scroller.offsetWidth * 0.55;
+          var ratio = Math.min(dist / maxD, 1);
+          var opacity = 1 - ratio * 0.72;
+          var scale  = 1 - ratio * 0.12;
+          var glow   = (1 - ratio) * 55;
+          card.style.opacity   = opacity;
+          card.style.transform = 'scale(' + scale + ')';
+          card.style.filter    = 'drop-shadow(0 0 ' + glow + 'px rgba(176,210,255,' + (1 - ratio) * 0.9 + '))';
+        });
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+
     // Load cards from JSON
     fetch('cards.json?v=' + Date.now())
       .then(function(r) { return r.json(); })
       .then(function(data) {
-        renderTrack('track-sw', data.schweiz    || []);
-        renderTrack('track-ch', data.china      || []);
-        renderTrack('track-de', data.deutschland|| []);
+        renderTrack('track-sw', data.schweiz     || []);
+        renderTrack('track-ch', data.china       || []);
+        renderTrack('track-de', data.deutschland || []);
+        renderTrack('track-it', data.italien     || []);
         moveCarousel(0, 'sw');
         moveCarousel(0, 'ch');
         moveCarousel(0, 'de');
+        moveCarousel(0, 'it');
       })
       .catch(function() {
         ['track-sw','track-ch','track-de'].forEach(function(id) {

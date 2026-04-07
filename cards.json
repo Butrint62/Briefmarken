@@ -158,5 +158,14 @@
         "images/deutschland/deutsches-reich_30/deutsches-reich-3.jpeg"
       ]
     }
+  ],
+  "italien": [
+    {
+      "id": "italienpostfrisch_1",
+      "name": "Italien Postfrisch",
+      "desc": "Jahrgang 1937",
+      "price": "40",
+      "image": "images/italien/italien_postfrisch_1937_40.jpeg"
+    }
   ]
 }

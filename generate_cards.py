@@ -32,6 +32,7 @@ CATEGORIES = {
     'schweiz':      'images/schweiz',
     'china':        'images/china',
     'deutschland':  'images/deutschland',
+    'italien':      'images/italien',
 }
 
 def is_year_like(s):

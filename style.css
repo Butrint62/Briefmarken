@@ -129,7 +129,7 @@ header nav.sitenav a {
 }
 .main-section {
   background-color: #3668A8;
-  padding: 50px 60px 60px 60px;
+  padding: 50px 60px 30px 60px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
@@ -412,6 +412,12 @@ header nav.sitenav a {
   border-radius: 8px 8px 0 0;
 }
 .rarities-card.expanded .carousel-peek-row { display: none; }
+.product-card-placeholder {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  pointer-events: none;
+}
 .carousel-track {
   display: flex;
   gap: 16px;
@@ -539,9 +545,9 @@ header nav.sitenav a {
 @media (max-width: 640px) {
   .rarities-section { padding: 20px 16px 28px 16px; }
   .rarities-card-title { font-size: 16px; }
-  .product-card { flex: 0 0 calc(80vw - 32px); scroll-snap-align: start; }
+  .product-card { flex: 0 0 calc(80vw - 32px); scroll-snap-align: center; }
   .carousel-track.track-expanded .product-card { flex: 0 0 calc(50% - 8px) !important; scroll-snap-align: unset; }
-  /* Native touch scroll on mobile */
+  /* Native touch scroll on mobile — cards snap to center */
   .carousel-track-wrapper {
     overflow-x: auto !important;
     overflow-y: hidden;
@@ -549,10 +555,14 @@ header nav.sitenav a {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding: 0 10vw;
   }
   .carousel-track-wrapper::-webkit-scrollbar { display: none; }
   /* Hide arrow buttons — swipe instead */
   .carousel-btn:not(#expand-sw):not(#expand-ch):not(#expand-de) { display: none !important; }
+  /* Peek row: 1 full card + sliver of 2nd peeking from right */
+  .peek-card { flex: 0 0 calc(80vw - 32px); }
+  .carousel-peek-row { margin-top: 0; padding: 8px 0 20px 10vw; gap: 4vw; overflow-x: clip; overflow-y: hidden; }
 }
 @media (min-width: 641px) and (max-width: 900px) {
   .rarities-section { padding: 32px 36px 40px 36px; }
@@ -837,4 +847,76 @@ header nav.sitenav a {
     grid-template-columns: 1fr;
     padding: 32px 36px 48px 36px;
   }
+}
+
+/* ── RARITÄTEN SPOTLIGHT ── */
+.spotlight-section {
+  padding: 24px 0 32px 48px;
+}
+.spotlight-header {
+  margin-bottom: 28px;
+  padding-right: 48px;
+}
+.spotlight-title {
+  font-family: 'Bungee', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.spotlight-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+}
+.spotlight-scroller {
+  overflow: hidden;
+  padding: 16px 0 24px 0;
+}
+.spotlight-track {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
+}
+.spotlight-card {
+  flex: 0 0 300px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.spotlight-card:hover { border-color: rgba(176,210,255,0.5); }
+.spotlight-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.spotlight-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+.spotlight-info {
+  padding: 12px 14px 14px 14px;
+}
+.spotlight-name {
+  font-family: 'Bungee', sans-serif;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.spotlight-btns {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .spotlight-section { padding: 28px 0 20px 16px; }
+  .spotlight-header { padding-right: 16px; }
+  .spotlight-card { flex: 0 0 240px; }
 }
