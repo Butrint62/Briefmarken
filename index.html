@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Briefmarken Basel</title>
+  <title>Briefmarken Ariel Basel – Ankauf & Verkauf</title>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/image_1.png" />
   <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
@@ -23,6 +24,14 @@
       </nav>
     </div>
   </header>
+
+  <script>
+    var CLOSED_BANNER = true;
+    var CLOSED_TEXT = "Wir sind vom 22. bis 26. Juni geschlossen.";
+    if (CLOSED_BANNER) {
+      document.write('<div style="background:#F5C400;color:#1a1a1a;text-align:center;padding:12px 20px;font-family:Raleway,sans-serif;font-size:15px;font-weight:700;">' + CLOSED_TEXT + '</div>');
+    }
+  </script>
 
   <section class="hero">
     <img class="hero-bg" src="images/image_2.jpg" alt="Briefmarken Sammlung" />
