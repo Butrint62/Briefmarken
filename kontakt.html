@@ -43,19 +43,20 @@
   <div class="kontakt-content">
     <div class="kontakt-left">
       <h2>So finden Sie uns</h2>
-      <div class="kontakt-info-block">
+      <div class="kontakt-info-block" id="adresse">
         <h3>ADRESSE</h3>
         <p>Briefmarken Ariel</p>
         <p>Reinacherstrasse 263</p>
         <p>4053 Basel</p>
       </div>
-      <div class="kontakt-info-block">
+      <div class="kontakt-info-block" id="oeffnungszeiten">
         <h3>ÖFFNUNGSZEITEN</h3>
         <p>Montag: 10–12h und 14–16h</p>
         <p>Dienstag: 9–12h</p>
         <p>Freitag: 10–12h und 14–16h</p>
+        <p style="margin-top:10px; color:rgba(255,255,255,0.75); font-style:italic;">Bitte melden Sie sich vor Ihrem Besuch kurz telefonisch bei uns.</p>
       </div>
-      <div class="kontakt-info-block">
+      <div class="kontakt-info-block" id="kontakt">
         <h3>KONTAKT</h3>
         <a href="tel:+41782472407">+41 78 247 24 07</a>
         <a href="mailto:briefmarkenariel@gmail.com">briefmarkenariel@gmail.com</a>
@@ -80,6 +81,28 @@
   </div>
 
   <script>
+    if (window.location.hash) {
+      var target = document.querySelector(window.location.hash);
+      if (target) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        setTimeout(function() {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (link) {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+  </script>
+
+  <script>
     function toggleMenu() {
       var menu = document.getElementById('dropdownMenu');
       if (menu.classList.contains('open')) {
@@ -102,5 +125,17 @@
       }
     });
   </script>
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="images/image_1.png" alt="Briefmarken Ariel Logo" />
+      <span class="footer-tagline">Ihr Briefmarkenexperte in Basel</span>
+    </div>
+    <div class="footer-links">
+      <a class="footer-link" href="#adresse">ADRESSE</a>
+      <a class="footer-link" href="#oeffnungszeiten">ÖFFNUNGSZEITEN</a>
+      <a class="footer-link" href="#kontakt">KONTAKT</a>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 Briefmarken Ariel Basel</div>
 </body>
 </html>
